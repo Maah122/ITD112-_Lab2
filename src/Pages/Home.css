@@ -1,0 +1,35 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column; /* Ensure charts are stacked vertically */
+  padding: 20px;
+  transition: margin-left 0.35s ease; /* Smooth sidebar transition */
+  margin-left: 250px; /* Default margin for active sidebar */
+}
+
+.dashboard-container.with-sidebar {
+  margin-left: 150px; /* Adjust this to match the sidebar width */
+}
+
+.dashboard-container .charts-container {
+  display: flex;
+  flex-direction: column; /* Stack charts in a column */
+  gap: 20px; /* Space between charts */
+}
+
+.chart-section {
+  /* Width adjustment for charts */
+  width: 100%; /* Default to full width */
+  max-width: 1100px; /* Max width for large screens */
+  margin: 0 auto; /* Center align charts */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 0; /* No margin for smaller screens */
+  }
+
+  .chart-section {
+    width: 100%; /* Full width for each chart */
+  }
+}
